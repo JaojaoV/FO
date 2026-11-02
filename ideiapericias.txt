@@ -1,0 +1,19 @@
+{
+  "corpo": 3,
+  "mente": 5,
+  "espirito": 2
+}
+
+{
+  "boas": [
+    { "pericia_id": 1, "valor": 5 },
+    { "pericia_id": 4, "valor": 3 },
+    { "pericia_id": 8, "valor": 4 }
+  ],
+  "ruins": [
+    { "pericia_id": 2 },
+    { "pericia_id": 5 },
+    { "pericia_id": 11 }
+  ]
+}
+[{"id":0,"imagem": }]

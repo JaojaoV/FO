@@ -1,0 +1,1090 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor: #d355da;
+}
+
+/* 
+font-family: "Caveat", cursive;
+font-family: "Indie Flower", cursive;
+font-family: "Zeyada", cursive;
+font-family: "Reenie Beanie", cursive;
+font-family: "Annie Use Your Telescope", cursive;
+
+font-family: "Luckiest Guy", cursive;
+ font-family: "Alfa Slab One", serif;
+*/
+/* 
+@font-face {
+    font-family: 'manchada';
+    src: url('fontes/i_mWeird.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'simples';
+    src: url('fontes/SimpleNotes-FreeDemo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'me';
+    src: url('fontes/Lapicero.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'muito';
+    src: url('fontes/BLOODY_CRE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pequena';
+    src: url('fontes/Scratch\ Kit.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'falhada';
+    src: url('/fontes/Teste1-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'preenchida';
+    src: url('/fontes/Teste2-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mais';
+    src: url('/fontes/Teste3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'numeros';
+    src: url('/fontes/Numeros-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cor {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+.cor input {
+    border: solid 2px white;
+    border-radius: 500px;
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* Remove a borda e padding interno no Firefox */
+input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+@font-face {
+    font-family: 'numerofeio';
+    src: url('fontes/manic-depressive.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'canva';
+    src: url('/fontes/Biro_Script_reduced.otf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'canvaForma';
+    src: url('/fontes/Karumbi-Regular.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'teste';
+    src: url('/fontes/Sketchy\ Notes.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+body ::-webkit-scrollbar {
+    display: none;
+}
+
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* overflow: hidden; */
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/imagens/fundom.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Este comando faz a mágica */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+
+.contador p {
+    font-size: 45px;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 0px;
+    animation: fadeIn 0.4s ease-out forwards;
+
+}
+
+.titulo {
+    font-family: 'mais';
+    font-size: 50px;
+    color: rgba(72, 48, 48, 0.79);
+    margin: 0px;
+
+}
+
+.titulo span {
+    font-family: 'canvaForma', sans-serif;
+    font-size: 60px;
+    color: rgba(72, 48, 48, 0.79);
+    margin: 0px;
+}
+
+.titulo-btn {
+    background-color: transparent;
+    border: none;
+    text-wrap: nowrap;
+
+}
+
+.atributo {
+    padding-left: 10px;
+    display: flex;
+    width: 100%;
+    margin-bottom: -40px;
+    justify-content: space-between;
+}
+
+
+.remover {
+    background-color: transparent;
+    border: none;
+}
+
+
+#habilidades {
+    margin-top: 15px;
+    width: 100vw;
+    height: 300px;
+    background-image: url(/imagens/10.png);
+    /* background-image: url(/imagens/rasgado2.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pericias {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'mais', 'numeros';
+
+    color: rgba(68, 45, 45, 0.904);
+}
+
+.pericias p {
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 30px;
+    font-size: 40px;
+}
+
+.pericias h4 {
+    margin: 0px;
+    font-size: 40px;
+    margin-top: -40px;
+
+    margin-left: 10px;
+}
+
+#nome {
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+
+
+#limitacoes {
+    margin-top: 20px;
+    width: 100vw;
+}
+
+#limitacoes p {
+    width: max-content;
+    height: 35px;
+    display: inline-block;
+    background: linear-gradient(100deg, rgba(255, 235, 59, 0) 1%, rgba(255, 235, 59, 0.8) 2.5%, rgba(255, 235, 59, 0.6) 98%);
+    padding: 2px 8px;
+    border-radius: 4px 8px 3px 5px;
+    /* Bordas levemente irregulares */
+    margin: 4px 0 0 10px;
+}
+
+#itens {
+    margin-top: 25px;
+    width: 85%;
+    min-width: 70%;
+    min-height: 100px;
+    height: max-content;
+}
+
+#itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff9c4;
+    /* Amarelo claro tipo post-it */
+    padding: 20px 10px 10px 10px;
+    transform: rotate(-2deg);
+    /* Rotação leve feita à mão */
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 2px 2px 5px 2px;
+    font-family: 'canva', 'canvaForma', sans-serif;
+    /* Subsitua por uma fonte handwritten */
+    font-size: 35px;
+}
+
+/* Fita adesiva no topo */
+#itens::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(3deg);
+    width: 80px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.adicionarvalor {
+
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    font-family: 'schoolbell', cursive;
+
+    color: rgba(68, 45, 45, 0.904);
+
+    text-align: right;
+
+}
+
+.item_menos {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    font-family: 'canva', cursive;
+    color: var(--cor);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -35px 0px;
+}
+
+#listai {
+    padding: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap');
+
+/* Container Apenas para Alinhamento dos Elementos em Linha */
+#postItContainer {
+    margin-top: 35px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Patrick Hand', cursive;
+    order: 99;
+}
+
+/* Input de Texto */
+#nomeItem {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px dashed #2c2c2c;
+    color: #2c2c2c;
+    padding: 2px 6px;
+    outline: none;
+    width: 140px;
+}
+
+/* Grupo de controle de quantidade (- valor +) */
+#controleQuantidade {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2px 6px;
+    border: 2px solid #2c2c2c;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+/* Botões pequenos de + e - */
+.btnQtd {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.2rem;
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 1.5px solid #2c2c2c;
+    border-radius: 50% 40% 55% 45% / 45% 55% 40% 50%;
+    color: #2c2c2c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.1s ease;
+}
+
+.btnQtd:hover {
+    transform: scale(1.15);
+    background-color: #ffab91;
+}
+
+.btnQtd:active {
+    transform: scale(0.95);
+}
+
+/* Indicador do número centralizado */
+#valQuant {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--cor);
+    min-width: 22px;
+    text-align: center;
+}
+
+/* Botão de confirmação principal à direita de tudo */
+#btnAdicionar {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.6rem;
+    line-height: 1;
+    width: 36px;
+    height: 36px;
+
+    background-color: var(--cor);
+    /* Tom salmão para contraste */
+    color: white;
+    border: 2px solid #2c2c2c;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    box-shadow: 2px 2px 0px #2c2c2c;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(3deg);
+    transition: all 0.15s ease;
+    margin-left: 4px;
+}
+
+#btnAdicionar:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 3px 3px 0px #2c2c2c;
+    background-color: #ff8a65;
+    color: #fff;
+}
+
+#btnAdicionar:active {
+    transform: translate(1px, 1px) rotate(0deg);
+    box-shadow: 1px 1px 0px #2c2c2c;
+}
+
+.containerRunas {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container pai que define o tamanho do carrossel na tela */
+.carrossel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    /* Altere aqui para a largura máxima que deseja para 1 runa */
+    margin: 0 auto;
+    /* Centraliza o carrossel na página */
+}
+
+/* Container dos itens (trocamos width: fit-content por 100%) */
+.runas {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* Trava a rolagem item por item */
+    scroll-behavior: smooth;
+    gap: 0;
+    /* Sem gap entre itens para mostrar apenas um perfeito */
+
+    /* Esconde a barra de rolagem */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.runas::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cada item ocupa exatos 100% da largura visível */
+.runa {
+    flex: 0 0 100%;
+    /* Força a ocupar 100% da largura do container */
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem internamente */
+    align-items: center;
+    scroll-snap-align: center;
+    /* Garante que o item pare centralizado */
+    flex-direction: column;
+}
+
+.runa input {
+    background-color: transparent;
+    font-size: 25px;
+    border: none;
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+.runa img {
+    width: 100%;
+    /* A imagem se adapta ao tamanho do card */
+    max-width: 300px;
+    /* Mantém o tamanho original de 300px que você tinha */
+    height: auto;
+    display: block;
+}
+
+.btn-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: transparent;
+    color: var(--cor);
+
+    /* Aplica o filtro de turbulência do SVG */
+    filter: url('#sketch-filter');
+
+    border: 3px solid var(--cor);
+    border-radius: 50%;
+    /* Mantém o formato base redondo, o filtro distorce */
+
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+.btn-carrossel:hover {
+    background: #f7f5f53d;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-carrossel.prev {
+    left: -10px;
+}
+
+.btn-carrossel.next {
+    right: -10px;
+}
+
+
+
+
+
+
+/* EFEITO DE SANGUE */
+
+/* Container fixo que cobre toda a tela sem interferir em cliques do jogo */
+.blood-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120vw;
+    height: 120vh;
+    pointer-events: none;
+    /* Deixa os cliques passarem para o jogo abaixo */
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    /* 1. Vinheta vermelha nos cantos */
+    background: radial-gradient(circle at center,
+            rgba(255, 0, 0, 0) 40%,
+            rgba(180, 0, 0, 0.4) 75%,
+            rgba(100, 0, 0, 0.85) 100%);
+}
+
+/* 2. Respingos de Sangue usando SVG inline codificado em Data URI */
+.blood-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><g fill="%23800000" opacity="0.75"><circle cx="50" cy="50" r="30"/><circle cx="80" cy="40" r="12"/><circle cx="35" cy="85" r="8"/><path d="M50 80 Q 45 130 48 160 Q 52 130 50 80 Z"/><circle cx="750" cy="60" r="45"/><circle cx="710" cy="90" r="18"/><path d="M750 100 Q 755 180 752 210 Q 745 180 750 100 Z"/><circle cx="80" cy="520" r="40"/><circle cx="120" cy="500" r="15"/><circle cx="700" cy="530" r="50"/><circle cx="640" cy="540" r="22"/><path d="M700 580 Q 695 500 698 460 Q 705 500 700 580 Z"/></g></svg>');
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: multiply;
+}
+
+/* Estado ativo: visível */
+.blood-overlay.active {
+    opacity: 1;
+}
+
+/* Animação de pulsar para estado crítico/perigo */
+.blood-overlay.pulse {
+    animation: bloodPulse 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes bloodPulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/*MENTAL  */
+
+.mental-overlay {
+    position: fixed;
+    top: -5vw;
+    left: -5vw;
+    width: 110vw;
+    height: 110vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+
+    /* Vinheta Menor: centro livre até 50% e bordas pretas mais sutis */
+    background: radial-gradient(circle at center,
+            transparent 50%,
+            rgba(0, 0, 0, 0.5) 80%,
+            rgba(0, 0, 0, 0.9) 100%);
+}
+
+.mental-overlay.active {
+    opacity: 1;
+}
+
+/* Estado de Animação */
+.mental-overlay.pulse {
+    opacity: 1;
+    /* Duração total: 10s (2s surto + 8s pausa com vinheta piscando) */
+    animation: insanityLoop10s 10s infinite linear;
+}
+
+@keyframes insanityLoop10s {
+
+    /* ===================================================
+     0s a 2s (0% a 20%): SURTO VISUAL INTENSO
+     =================================================== */
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        backdrop-filter: blur(0px) brightness(1);
+        -webkit-backdrop-filter: blur(0px) brightness(1);
+    }
+
+    5% {
+        transform: scale(1.15) rotate(0.6deg);
+        opacity: 1;
+        backdrop-filter: blur(8px) brightness(0.3);
+        -webkit-backdrop-filter: blur(8px) brightness(0.3);
+    }
+
+    10% {
+        transform: scale(1.3) rotate(-0.8deg);
+        opacity: 1;
+        backdrop-filter: blur(14px) brightness(0.1);
+        -webkit-backdrop-filter: blur(14px) brightness(0.1);
+    }
+
+    15% {
+        transform: scale(1.08) rotate(0.3deg);
+        opacity: 1;
+        backdrop-filter: blur(3px) brightness(1.1);
+        -webkit-backdrop-filter: blur(3px) brightness(1.1);
+    }
+
+    20% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        backdrop-filter: blur(0px) brightness(1);
+        -webkit-backdrop-filter: blur(0px) brightness(1);
+    }
+
+    /* ===================================================
+     2s a 10s (20% a 100%): PAUSA COM VINHETA PISCANDO
+     O blur fica desligado, mas a vinheta pisca (opacity)
+     =================================================== */
+    30% {
+        opacity: 0.3;
+        /* Esconde/Suaviza a vinheta */
+        transform: scale(1) rotate(0deg);
+        backdrop-filter: blur(0px) brightness(1);
+        -webkit-backdrop-filter: blur(0px) brightness(1);
+    }
+
+    40% {
+        opacity: 0.9;
+        /* Mostra a vinheta */
+        transform: scale(1.02) rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.2;
+        transform: scale(1) rotate(0deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.03) rotate(0deg);
+    }
+
+    70% {
+        opacity: 0.4;
+        transform: scale(1) rotate(0deg);
+    }
+
+    80% {
+        opacity: 0.85;
+        transform: scale(1.02) rotate(0deg);
+    }
+
+    90% {
+        opacity: 0.3;
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        /* Prepara para entrar no surto visual novamente */
+        transform: scale(1) rotate(0deg);
+        backdrop-filter: blur(0px) brightness(1);
+        -webkit-backdrop-filter: blur(0px) brightness(1);
+    }
+}
+
+.marca {
+    width: 100%;
+    /* Permite ocupar a largura calculada pelo flex */
+    max-width: 30px;
+    /* Tamanho máximo quando há poucas marcas */
+    height: auto;
+    /* Mantém a proporção da imagem */
+
+    flex-shrink: 1;
+    /* FORÇA a imagem a encolher quando o espaço acaba */
+    min-width: 0;
+}
+
+.botoes {
+    overflow: hidden;
+    width: 97%;
+    display: flex;
+    gap: 15px;
+}
+
+.att {
+    display: flex;
+    /* Coloca os botões lado a lado */
+    flex-direction: row;
+    /* Garante que fiquem na horizontal */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    white-space: nowrap;
+    /* Impede que o texto quebre para a linha de baixo */
+    flex-wrap: nowrap;
+    /* Impede que os botões caiam para outra linha */
+}
+
+/* Garante que os elementos dentro da .att não quebrem linha e fiquem alinhados */
+.att .titulo-btn,
+.att .adicionarvalor {
+    display: inline-flex;
+    /* Trata o botão como bloco flex em linha */
+    align-items: center;
+    white-space: nowrap;
+    /* Garante que o texto dos botões não quebre */
+}
+
+/* Opcional: remove margens do h1 que costumam quebrar layout */
+.att .titulo {
+    margin: 0;
+    display: inline;
+    white-space: nowrap;
+}
+
+.capa {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+
+#pingente img {
+    width: 100px;
+}
+
+#sair img {
+    width: 70px;
+}
+
+#sair {
+    display: none;
+    z-index: 1000;
+}
+
+.carrossel-container {
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+    background: #211b18;
+    border: 2px solid #4a3a2f;
+    border-radius: 6px;
+
+    padding: 12px 8px;
+    box-sizing: border-box;
+
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, 0.8),
+        inset 0 0 3px #705642,
+        0 3px 8px rgba(0, 0, 0, 0.6);
+
+    perspective: 1000px;
+}
+
+#paginas.virando-direita {
+    animation: virarDireita 0.45s ease-in-out;
+}
+
+#paginas.virando-esquerda {
+    animation: virarEsquerda 0.45s ease-in-out;
+}
+
+@keyframes virarDireita {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+        opacity: 1;
+    }
+
+    35% {
+        transform: perspective(1000px) rotateY(-4deg);
+        opacity: 0.9;
+    }
+
+    65% {
+        transform: perspective(1000px) rotateY(4deg);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes virarEsquerda {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+        opacity: 1;
+    }
+
+    35% {
+        transform: perspective(1000px) rotateY(4deg);
+        opacity: 0.9;
+    }
+
+    65% {
+        transform: perspective(1000px) rotateY(-4deg);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.carrossel-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    bottom: 8px;
+    left: 50%;
+
+    width: 3px;
+
+    transform: translateX(-50%);
+
+    background: #171311;
+
+    box-shadow:
+        -1px 0 #4a382b,
+        1px 0 rgba(0, 0, 0, 0.8),
+        inset 0 0 4px rgba(0, 0, 0, 0.8);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+#paginas {
+    margin-bottom: 30px;
+    width: 100%;
+
+    background: #29221e;
+
+    border: none;
+
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    gap: 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    border-radius: 3px;
+
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+#paginas::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.pagina {
+    flex: 0 0 50%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+
+    scroll-snap-align: start;
+
+    padding: 5px;
+
+    background: #302722;
+
+    box-shadow:
+        inset -6px 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-pagina {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+}
+
+.pagina img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+
+/* BOTÕES DO CARROSSEL */
+
+.btn-carrosselpaginas {
+    position: absolute;
+    /* Aplica o filtro de turbulência do SVG */
+    filter: url('#sketch-filter');
+    border: 3px solid var(--cor);
+    border-radius: 50%;
+
+    top: 91%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 40px;
+    height: 60px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: none;
+    color: var(--cor);
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-carrossel:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.btn-esquerda {
+    left: 5px;
+}
+
+.btn-direita {
+    right: 5px;
+}
+
+.fotoAbrida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    display: none;
+    z-index: 10000;
+}
+
+.fotoAbrida img {
+    width: 100%;
+
+
+    display: block;
+}
+
+.black-overlay {
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}

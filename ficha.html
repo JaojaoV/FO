@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Annie+Use+Your+Telescope&family=Caveat:wght@400..700&family=Indie+Flower&family=Luckiest+Guy&family=Reenie+Beanie&family=Zeyada&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="cor">
+        <input type="color" onchange="TrocarCor(value)" name="color" id="colorpicker">
+    </div>
+    <a href="/index.html">
+        <h1 id="nome" class="titulo"></h1>
+    </a>
+
+
+
+
+    <div class="atributo">
+        <div class="botoes">
+            <div class="att">
+                <button onclick="adicionarMarca('corpo')" value="corpo" class="titulo-btn">
+                    <h1 class="titulo">corpo</h1>
+                </button>
+                <button id="val" class="adicionarvalor" ondblclick="subVal('corpoadd')" onclick="addVal('corpoadd')">
+                    <h1 class="titulo"><span id="corpov"></span><span id="corpoadd"></span></h1>
+                </button>
+            </div>
+            <button onclick="removerMarca('corpo')" value="corpo" class="remover">
+                <div id="corpo" class="contador"></div>
+            </button>
+        </div>
+
+        <!-- <button class="adicionarvalor" onclick="addValor('corpoadd')">+</button> -->
+
+    </div>
+
+    <div class="atributo">
+        <div class="botoes">
+            <div class="att">
+                <button onclick="adicionarMarca('mente')" value="mente" class="titulo-btn">
+                    <h1 class="titulo"> mente</h1>
+                </button>
+                <button id="val" class="adicionarvalor" ondblclick="subVal('menteadd')" onclick="addVal('menteadd')">
+                    <h1 class="titulo"><span id="mentev"></span><span id="menteadd"></span></h1>
+                </button>
+            </div>
+
+            <button onclick="removerMarca('mente')" value="mente" class="remover">
+                <div id="mente" class="contador"></div>
+            </button>
+        </div>
+
+        <!-- <button class="adicionarvalor" onclick="addValor('menteadd')">+</button> -->
+
+
+    </div>
+
+    <div class="atributo">
+        <div class="botoes">
+            <div class="att">
+                <button onclick="adicionarMarca('espirito')" value="espirito" class="titulo-btn">
+                    <h1 class="titulo">espirito</h1>
+
+                </button>
+                <button id="val" class="adicionarvalor" ondblclick="subVal('espiritoadd')"
+                    onclick="addVal('espiritoadd')">
+                    <h1 class="titulo"><span id="espiritov"></span><span id="espiritoadd"></span></h1>
+                </button>
+            </div>
+
+            <button onclick="removerMarca('espirito')" value="espirito" class="remover">
+                <div id="espirito" class="contador"></div>
+            </button>
+        </div>
+
+        <!-- <button class="adicionarvalor" onclick="addValor('espiritoadd')">+</button> -->
+
+    </div>
+    <br>
+
+    <div class="pericias" id="habilidades">
+        <h4>pericias:</h4>
+
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+    </div>
+    <div class="pericias" id="limitacoes">
+        <h4>limitações:</h4>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+
+    </div>
+
+    <svg style="display:none;">
+        <defs>
+            <filter id="rough-edge">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="itens" class="itens">
+        <div id="listai"></div>
+        <div id="postItContainer">
+            <!-- Input de Texto -->
+            <input id="nomeItem" type="text" placeholder="Espada">
+
+            <!-- Controle de Quantidade com Botões + e - -->
+            <div id="controleQuantidade">
+                <button type="button" class="btnQtd"
+                    onclick="let input = document.getElementById('quantidadeItem'); if(input.value > 1) { input.value--; document.getElementById('valQuant').innerText = input.value; }">-</button>
+                <span id="valQuant">1</span>
+                <button type="button" class="btnQtd"
+                    onclick="let input = document.getElementById('quantidadeItem'); input.value++; document.getElementById('valQuant').innerText = input.value;">+</button>
+
+                <!-- Input Original mantido invisível para guardar o valor final -->
+                <input id="quantidadeItem" type="number" min="1" value="1" style="display: none;">
+            </div>
+
+            <!-- Botão Principal de Adicionar -->
+            <button id="btnAdicionar"
+                onclick="novoItem(document.getElementById('nomeItem').value,document.getElementById('quantidadeItem').value)">+</button>
+        </div>
+    </div>
+
+    <div class="carrossel-wrapper">
+        <button class="btn-carrossel prev" onclick="mudarRuna(-1)">&#10094;</button>
+
+        <div id="runas" class="runas">
+
+        </div>
+
+        <button class="btn-carrossel next" onclick="mudarRuna(1)">&#10095;</button>
+    </div>
+
+    <br>
+
+
+    <button onclick="AbrirCaderno()" class="capa" id="capa">
+        <img src="/imagens/capa.png" alt="">
+    </button>
+
+
+    <div class="carrossel-container">
+
+        <button class="btn-carrosselpaginas btn-esquerda" onclick="MoverCarrossel(-1)">
+            ❮
+        </button>
+
+        <div id="paginas">
+            <!-- As .pagina continuam sendo criadas pelo JavaScript -->
+        </div>
+
+        <button class="btn-carrosselpaginas btn-direita" onclick="MoverCarrossel(1)">
+            ❯
+        </button>
+
+    </div>
+
+    <button onclick="FecharCaderno()" class="pingente" id="sair">
+        <img src="/imagens/medalha.png" alt="">
+    </button>
+    <br>
+
+    <button onclick="FecharPagina()" id="fotoAbrida" class="fotoAbrida">
+
+    </button>
+
+
+
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="sketch-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Camada do efeito -->
+    <div id="blood-overlay" class="blood-overlay"></div>
+    <div id="mental-overlay" class="mental-overlay"></div>
+    <div id="black-overlay" class="black-overlay"></div>
+
+
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
